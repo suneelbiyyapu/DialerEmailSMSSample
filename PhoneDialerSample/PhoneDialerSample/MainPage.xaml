@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PhoneDialerSample"
+             x:Class="PhoneDialerSample.MainPage">
+
+    <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <StackLayout Padding="0,20,0, 0">
+
+
+            <Label Text="Open number in dialer" 
+               FontAttributes="Bold"
+               FontSize="Medium"
+               HorizontalOptions="Center" />
+            <Grid Padding="10,5,10,30">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Entry x:Name="entryPhoneNumber" 
+               Placeholder="Phone number" 
+               Keyboard="Numeric" 
+               TextColor="Blue"
+               Grid.Row="0" Grid.Column="0"></Entry>
+
+                <Button Text="Call" 
+                TextColor="White" 
+                BackgroundColor="Blue" 
+                HorizontalOptions="FillAndExpand" 
+                Clicked="ButtonCallClicked"
+                Grid.Row="1" Grid.Column="0"></Button>
+            </Grid>
+
+            <Label Text="Open text in Message app" 
+               FontAttributes="Bold"
+               FontSize="Medium"
+               HorizontalOptions="Center" />
+            <Grid  Padding="10,5,10,30">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Entry x:Name="entryMessgeTo" 
+                   Placeholder="Phone number" 
+                   Keyboard="Numeric" 
+                   TextColor="Blue"
+                   Grid.Row="0" Grid.Column="0"></Entry>
+                <Entry x:Name="entryMessageText" 
+                   Placeholder="Message body" 
+                   TextColor="Blue"
+                   Grid.Row="1" Grid.Column="0"></Entry>
+                <Button Text="SMS" 
+                    TextColor="White" 
+                    BackgroundColor="Blue" 
+                    HorizontalOptions="FillAndExpand" 
+                    Clicked="ButtonSMSClicked"
+                    Grid.Row="2" Grid.Column="0"></Button>
+            </Grid>
+
+
+            <Label Text="Open Mail" 
+               FontAttributes="Bold"
+               FontSize="Medium"
+               HorizontalOptions="Center" />
+            <Grid  Padding="10,5,10,30">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Entry x:Name="entryEmail" 
+                   Placeholder="To Email" 
+                   Keyboard="Email" 
+                   TextColor="Blue"
+                   Grid.Row="0" Grid.Column="0"></Entry>
+                <Entry x:Name="entryEmailSubject" 
+                   Placeholder="Subject" 
+                   TextColor="Blue"
+                   Grid.Row="1" Grid.Column="0"></Entry>
+                <Editor x:Name="editorEmailBody" 
+                        HeightRequest="50"
+                        Text="Email body text it is..."
+                        TextColor="Blue"
+                        Grid.Row="2" Grid.Column="0"></Editor>
+                <Button Text="Mail" 
+                    TextColor="White" 
+                    BackgroundColor="Blue" 
+                    HorizontalOptions="FillAndExpand" 
+                    Clicked="ButtonMailClicked"
+                    Grid.Row="3" Grid.Column="0"></Button>
+            </Grid>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
